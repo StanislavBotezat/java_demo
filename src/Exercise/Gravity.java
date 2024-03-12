@@ -10,6 +10,6 @@ public class Gravity {
         double mw;
         mw = (ew * 17) / 100;
         System.out.println("Земной вес : " +ew + " кгс");
-        System.out.println("лунный вес : " +mw + " кгс");
+        System.out.println("Лунный вес : " +mw + " кгс");
     }
 }
