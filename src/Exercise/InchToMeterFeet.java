@@ -10,7 +10,7 @@ public class InchToMeterFeet {
                 String roundmeter = String.format("%.3f",meters);
                 if (inches==0 & feet==0) continue;
                 System.out.println(feet+ " Футам " + inches + " Дюймам соответсвует " + roundmeter + " метрам.");
-                if (inches % 12==0) {
+                if (inches==12) {
                     System.out.println();
                 }
             }
