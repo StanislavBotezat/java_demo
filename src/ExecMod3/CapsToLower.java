@@ -15,7 +15,5 @@ public class CapsToLower {
  }
         System.out.println();
         System.out.println("было изменено " +i+ " символ");
-
-
     }
 }
