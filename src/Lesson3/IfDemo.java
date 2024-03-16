@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class IfDemo {
     public static void main(String[] args) {
-//        if (condition) {
-//            some code;
-//        }
-//        else {
-//                    }
+//      if (condition) {some code;}
+//        else-if (condition){some code}
+//        else-if (condition){some code}
+//        ...
+//      else {some code}
 
         char ch, answer = 'M';
         System.out.println("A letter from diapason A-Z should be guessed");
