@@ -10,7 +10,7 @@ public class CapsToLower {
      if (ch >= 97 & ch <= 122) {ch -= 32; i++;}
      else if (ch >= 65 & ch <= 90) {ch += 32; i++;}
      else if (ch=='.')  break;
-     else ch += 0;
+
      System.out.print(ch);
  }
         System.out.println();

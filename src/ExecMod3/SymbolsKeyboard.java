@@ -1,11 +1,11 @@
 package ExecMod3;
 
-import javax.sound.midi.Soundbank;
+
 import java.io.IOException;
 
 public class SymbolsKeyboard {
     public static void main(String[] args) throws IOException {
-        char ch='0';
+        char ch;
         int i=0;
         System.out.println("Введите символы с клавиатуры, программа сотановится, когда введете точку");
 
@@ -15,6 +15,7 @@ public class SymbolsKeyboard {
         if (ch == '.') dot++;
       }
         System.out.println("количество пробелов " + i);
+
     }
 }
 
