@@ -1,28 +1,28 @@
 package ExecMod3;
 
-import java.awt.*;
 import java.io.IOException;
 
-public class Help2 {
-    public static void main(String[] args) throws IOException {
+public class Help3 {
+    public static void main(String[] args)
+        throws IOException {
 
-        char choice, ignore;
-        do{
-            System.out.println("Справка:");
-            System.out.println("1.if");
-            System.out.println("2.switch");
-            System.out.println("3.for");
-            System.out.println("4.while");
-            System.out.println("5.do-while");
-            System.out.println("6.break");
-            System.out.println("7.continue");
+            char choice, ignore;
+            do{
+                System.out.println("Справка:");
+                System.out.println("1.if");
+                System.out.println("2.switch");
+                System.out.println("3.for");
+                System.out.println("4.while");
+                System.out.println("5.do-while");
+                System.out.println("6.break");
+                System.out.println("7.continue");
 
-            System.out.println("Выберите и введите цифру");
-            choice = (char) System.in.read();
-                    do {
-                        ignore = (char) System.in.read();
-                    }while (ignore != '\n') ;
-            } while (choice<'1' | choice >'5');
+                System.out.println("Выберите и введите цифру");
+                choice = (char) System.in.read();
+                do {
+                    ignore = (char) System.in.read();
+                }while (ignore != '\n') ;
+            } while (choice<'1' | choice >'7');
 
 
 
@@ -59,13 +59,17 @@ public class Help2 {
                     System.out.println("} while (условие);");
                     break;
 
+                case   '6':
+                    System.out.println("Oпepaтop break:\n");
+                    System.out.println("break; или break метка;");
+                    break;
+                case '7':
+                    System.out.println("Oпepaтop continue:\n");
+                    System.out.println("continue; или continue метка;");
+                    break;
 
-
-
-                // default:
-                  //  System.out.println("Запрос не найден");
 
             }
-
         }
-    }
+}
+
