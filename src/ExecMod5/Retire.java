@@ -10,12 +10,12 @@ public class Retire {
         char answer;
 
         Scanner someascanner = new Scanner(System.in);
+        for ( ; ; ){
         System.out.println("Выберете пол человека нажмите M для мужского / F для женского и любую другую для LGBTQ+++");
         answer =  (char) System.in.read();
-        for ( ; ; ){
         if (answer=='M' | answer == 'm'){  male = true; System.out.println("Ведите возраст человека : ");}
         else if (answer =='F' | answer =='f'){ female = false; System.out.println("Ведите возраст человека : ");}
-        else { System.out.println(" ваш пол был определен как боевой вертолет апачи. "); break;}
+        else { System.out.println(" ваш пол был определен как боевой вертолет апачи. Начните заново"); break;}
 
         age = someascanner.nextInt();
 
@@ -30,6 +30,7 @@ public class Retire {
         else if (female==false & age < 65 & age >0 ){
             System.out.println("Эх, придется еще поработать " + (65 - age) + " лет");
         } else {
+            System.out.println("вы ввели неправильный возраст");
         }
     }
 

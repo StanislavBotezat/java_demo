@@ -1,9 +1,8 @@
 package ExecMod3;
 
-import java.net.Socket;
 import java.util.Scanner;
 
-public class EvenOdd {
+public class EvenOddHW {
     public static void main(String[] args)  {
         Scanner in = new Scanner(System.in);
 
