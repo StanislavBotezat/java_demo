@@ -7,7 +7,7 @@ public class ArrayUtilsDemo {
         ArrayUtils myUtils = new ArrayUtils(nums);
         myUtils.initArray  ();
         myUtils.printArray();
-       myUtils.copyArray(numsToCopyIn);
+        myUtils.copyArray(numsToCopyIn);
         myUtils.printArray ();
 
 

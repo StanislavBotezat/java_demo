@@ -1,15 +1,15 @@
-package ExecMod6;
+package Lesson15;
 
-public class Queue {
+public class FixedQueue implements InterfaceCharQueue {
 
     private char q[];
     private int putloc, getloc;
 
-    Queue( int size){
+    FixedQueue(int size){
         q = new char [size+1];
         putloc = getloc = 0;
         }
-    Queue (Queue ob){
+    FixedQueue(FixedQueue ob){
         putloc = ob.putloc;
         getloc = ob.getloc;
         q= new char [ob.q.length];
@@ -17,28 +17,50 @@ public class Queue {
             q[i] = ob.q[i];
     }
 
-    Queue (char a[]){
+    FixedQueue(char a[]){
         putloc = getloc = 0;
         q= new char [a.length +1];
-        for (int i=0 ; i<a.length; i++) put(a[i]);
+        for (int i=0 ; i<a.length; i++) {
+            try {
+                put(a[i]);
+            } catch (QueueFullExeption e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 
 
-    void put (char ch){
+    public void put(char ch) throws QueueFullExeption{
         if (putloc == q.length-1){
-            System.out.println(" Очередь заполнена.");
-            return;
+            throw new QueueFullExeption(q.length - 1);
+
         }
         putloc++;
         q[putloc] = ch;
         }
-        char get (){
+        public char get() throws QueueEmptyExeption {
         if (getloc == putloc) {
-            System.out.println(" Очередь пуста.");
+            throw new QueueEmptyExeption();
         }
         getloc++;
         return q[getloc];
         }
+
+
+        void  putMultipleSymbols(int num){
+
+        for (int i = 0; i < num; i++){
+            try {
+                put ((char) ('A'+i));
+            } catch (QueueFullExeption e) {
+                e.printStackTrace();
+            }
+        }
+
+}
+
+
+
 
 }
